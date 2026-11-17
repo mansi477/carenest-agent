@@ -31,7 +31,7 @@ flowchart TD
 | API | `app/main.py` | `POST /chat`. Sessions are namespaced by user. |
 | Evals | `evals/` | 31 cases, an offline retrieval eval, an end-to-end eval, and baseline comparison. |
 
-Design choices worth being able to defend in an interview:
+Design choices:
 
 - **Routing before acting.** A cheap structured-output call decides the path, so FAQ questions never carry tool schemas and tool questions never carry retrieved text.
 - **Grounding with an exit.** If retrieval is not confident, the bot does not guess. It escalates.
